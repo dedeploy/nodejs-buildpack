@@ -16,7 +16,7 @@ BUILD_DIR=${1:-}
 CACHE_DIR=${2:-}
 ENV_DIR=${3:-}
 BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
-$BP_DIR/compile-extensions/bin/check_stack_support
+#$BP_DIR/compile-extensions/bin/check_stack_support
 $BP_DIR/compile-extensions/bin/check_buildpack_version $BP_DIR $CACHE_DIR
 
 mkdir -p "$BUILD_DIR/.heroku/node/"
@@ -39,7 +39,7 @@ source $BP_DIR/lib/environment.sh
 source $BP_DIR/lib/binaries.sh
 source $BP_DIR/lib/cache.sh
 source $BP_DIR/lib/dependencies.sh
-source $BP_DIR/lib/vendor/new_relic/install.sh $BUILD_DIR
+#source $BP_DIR/lib/vendor/new_relic/install.sh $BUILD_DIR
 
 ### Handle errors
 
